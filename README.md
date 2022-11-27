@@ -21,12 +21,12 @@ const client = new UmapClient("https://framacarte.org");
 The client only supports reading public data for now.
 
 - [search](#search)
-- [userMaps](#userMaps)
+- [userMaps](#usermaps)
 - [geojson](#geojson)
-- [dataLayer](#dataLayer)
-- [dataLayerVersion](#dataLayerVersion)
-- [ajaxProxy](#ajaxProxy)
-- [pictogramJson](#pictogramJson)
+- [dataLayer](#datalayer)
+- [dataLayerVersion](#datalayerversion)
+- [ajaxProxy](#ajaxproxy)
+- [pictogramJson](#pictogramjson)
 
 #### search
 
@@ -68,14 +68,6 @@ Get versions of a data layer:
 const versions = await client.dataLayerVersions("2326451");
 ```
 
-#### pictogramJson
-
-Get available icons:
-
-```js
-const icons = await client.pictogramJson();
-```
-
 #### ajaxProxy
 
 Get external data through the AJAX proxy:
@@ -84,4 +76,12 @@ Get external data through the AJAX proxy:
 const externalData = await client.ajaxProxy(
   "https://overpass-api.de/api/interpreter?data=..."
 );
+```
+
+#### pictogramJson
+
+Get available icons:
+
+```js
+const icons = await client.pictogramJson();
 ```
